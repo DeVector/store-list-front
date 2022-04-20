@@ -8,6 +8,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { NavComponent } from './components/shared/nav/nav.component';
 import { HardwareListComponent } from './components/store/hardware-list/hardware-list.component';
 import { FilterComponent } from './components/store/filter/filter.component';
+import { HomeComponent } from './components/shared/home/home.component';
+import { HardwareStoreComponent } from './components/store/hardware-store/hardware-store.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import { FilterComponent } from './components/store/filter/filter.component';
     FooterComponent,
     NavComponent,
     HardwareListComponent,
-    FilterComponent
+    FilterComponent,
+    HomeComponent,
+    HardwareStoreComponent
   ],
   imports: [
     BrowserModule,
