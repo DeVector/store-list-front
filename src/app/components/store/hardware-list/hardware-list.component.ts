@@ -9,7 +9,6 @@ import { HardwareServiceService } from 'src/app/service/hardware-service.service
 export class HardwareListComponent implements OnInit {
 
   hardwares: any;
-  hardware: any;
 
   constructor(private service: HardwareServiceService) { }
 

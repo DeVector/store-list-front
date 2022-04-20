@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Hardware } from 'src/app/model/hardware';
 
 @Component({
   selector: 'app-hardware-item',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: [ 'hardware-item.component.css' ]
 })
 export class HardwareItemComponent implements OnInit {
+
+  @Input() hardware!: Hardware;
 
   constructor() { }
 
