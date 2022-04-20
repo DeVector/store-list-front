@@ -10,6 +10,7 @@ import { HardwareListComponent } from './components/store/hardware-list/hardware
 import { FilterComponent } from './components/store/filter/filter.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { HardwareStoreComponent } from './components/store/hardware-store/hardware-store.component';
+import { HardwareItemComponent } from './components/store/hardware-item/hardware-item.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { HardwareStoreComponent } from './components/store/hardware-store/hardwa
     HardwareListComponent,
     FilterComponent,
     HomeComponent,
-    HardwareStoreComponent
+    HardwareStoreComponent,
+    HardwareItemComponent
   ],
   imports: [
     BrowserModule,
