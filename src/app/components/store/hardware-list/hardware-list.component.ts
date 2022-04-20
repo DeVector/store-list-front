@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HardwareServiceService } from 'src/app/service/hardware-service.service';
 
 @Component({
   selector: 'app-hardware-list',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HardwareListComponent implements OnInit {
 
-  constructor() { }
+  hardwares: any;
+  hardware: any;
+
+  constructor(private service: HardwareServiceService) { }
 
   ngOnInit(): void {
+    this.findAll();
+  }
+
+  findAll() {
+    this.hardwares = this.service.findAll().subscribe(data => {
+      this.hardwares = data;
+      console.log(this.hardwares);
+    })
   }
 
 }

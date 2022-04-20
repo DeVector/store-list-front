@@ -1,16 +1,23 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
+import { Hardware } from '../model/hardware';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HardwareServiceService {
 
-  baseURL = "localhost:8080/hardware";
+  baseURL = "http://localhost:8080/api/hardware";
+
+  httpOption = {
+    Headers: new HttpHeaders({'content-type': 'application/json'})
+  }
 
   constructor(private httpClient: HttpClient) { }
 
-  findAll() {
-    this.httpClient.get(this.baseURL);
+  findAll(){
+    return this.httpClient.get(this.baseURL);
   }
+
 }

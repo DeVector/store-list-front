@@ -13,6 +13,7 @@ import { FilterComponent } from './components/store/filter/filter.component';
 import { HomeComponent } from './components/shared/home/home.component';
 import { HardwareStoreComponent } from './components/store/hardware-store/hardware-store.component';
 import { HardwareItemComponent } from './components/store/hardware-item/hardware-item.component';
+import { HardwareServiceService } from './service/hardware-service.service';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { HardwareItemComponent } from './components/store/hardware-item/hardware
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [HardwareServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
